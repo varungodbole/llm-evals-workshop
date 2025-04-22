@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=https://promptfoo.dev/config-schema.json
+
+description: "My first eval - tests that the whole thing is running"
+
+prompts:
+  - "Write a tweet about {{topic}}"
+  - "Write a concise, funny tweet about {{topic}}"
+
+providers:
+  - "openai:chat:gpt-4.1-mini"
+  - "openai:chat:gpt-4.1-nano"
+
+tests:
+  - vars:
+      topic: bananas
+
+  - vars:
+      topic: avocado toast
+    assert:
+      # Make sure output contains the word "avocado"
+      - type: icontains
+        value: avocado
+
+      # Prefer shorter outputs
+      - type: javascript
+        value: 1 / (output.length + 1)
+
+  - vars:
+      topic: new york city
+    assert:
+      - type: llm-rubric
+        value: ensure that the output is funny
+        provider: openai:chat:gpt-4.1-mini
