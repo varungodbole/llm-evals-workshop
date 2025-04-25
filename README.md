@@ -6,8 +6,7 @@ The goal of this workshop is to give you the mental models necessary to rapidly 
 
 - A computer that can run [npx](https://docs.npmjs.com/cli/v11/commands/npx). It comes installed by default on the latest macOS.
 
-- API keys with the model provider of your choice.
-  - For simplicitly, we're going to use OpenAI's models. But you're welcome to use whichever model you want.
+- API keys with the model provider of your choice. For simplicity, we're going to use OpenAI's models. But you're welcome to use whichever model you like.
 
 ## Getting Started
 
@@ -19,7 +18,7 @@ The goal of this workshop is to give you the mental models necessary to rapidly 
 
 3. Run `npx promptfoo@latest eval --config hello_world.yaml` to test that the default eval setup is working on your machine. This will run a simple eval that tests a model's ability to generate tweets about different topics.
 
-4. Run `npx promptfoo@latest view` to cause promptfoo to create start an HTTP server so that you can view the side-by-side results in a nice UI in the browser.
+4. Run `npx promptfoo@latest view` to cause promptfoo to start an HTTP server so that you can view the side-by-side results in a nice UI in the browser.
 
 ## Misc thoughts about hello_world.yaml
 
