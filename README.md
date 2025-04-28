@@ -22,11 +22,11 @@ The goal of this workshop is to give you the mental models necessary to rapidly 
 
 ## Misc thoughts about hello_world.yaml
 
-- It runs the latest versions of `openai:chat:gpt-4.1-mini` and `openai:chat:gpt-4.1-nano`. In practice, it's a good idea to use the specific time-stampped models (e.g. `openai:chat:gpt-4.1-nano-2025-04-14`).
+- It runs the latest versions of `openai:chat:gpt-4.1-mini` and `openai:chat:gpt-4.1-nano`. In practice, it's a good idea to use the specific time-stamped models (e.g. `openai:chat:gpt-4.1-nano-2025-04-14`).
 
 - The temperature is set to 0 by default. This leads to deterministic sampling, and therefore more deterministic evaluations. However, this may create drift between what you see in production and what you see in your evals. For now, we'll leave it with the default parameters.
   - It's worth attempting to clarify things like this with an LLM. ChatGPT search with o3 seems really good right now. [Here's a link](https://chatgpt.com/share/6807f878-e380-8006-9d83-f710ccb647b7) to a conversation we had about this specific issue. I've found that these models are good enough that o3 specifically doesn't seem to normally confabulate its answers.
 
 ## During the workshop
 
-1. Create `my_evals.yaml` during the workshop and add your various evals in there. You can now just run `npx promptfoo@latest eval --config my_evals.yaml` and `npx promptfoo@latest view` to trigger the evals on your evals, and to view the results in the browser.
+1. Create `my_evals.yaml` during the workshop and add your various evals in there. You can now just use `npx promptfoo@latest eval --config my_evals.yaml` and `npx promptfoo@latest view` to run your evals, and to view the results in the browser.
